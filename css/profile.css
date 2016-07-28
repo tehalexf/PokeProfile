@@ -1,0 +1,113 @@
+
+body {
+height: 90%;
+}
+
+.main{
+
+width: 100%;
+height: 130%;
+margin-top: 53px;
+
+}
+/*	#ccece7 			#eef9e9		*/
+.profile_stats{
+
+width: 200px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 20px;
+float: left;
+height: 100%;
+background-color: #4A96AD;
+
+}
+
+.profile_cards{
+
+width: 84.16%;
+height: 100%;
+float: right;
+
+    background: #ccece7; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ccece7, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ccece7, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ccece7, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ccece7, #F2FBEE); /* Standard syntax */
+
+}
+
+.profile_content{
+padding-left: 10px;
+padding-top: 10px;
+}
+
+.poke_row{
+height: 250px;
+padding-top: 20px;
+padding-left: 0px;
+padding-right: 20px;
+width: 100%;
+}
+
+
+.poke_character{
+  max-width:100px;
+  height:auto;
+  margin: auto;
+  display: block;
+  width: 45%;
+}
+
+.cen_text{
+text-align: center;
+}
+
+.cen_text span{
+font-size: 20px;
+}
+
+.prog_bar{
+width: 60%; 
+margin: 0 auto
+}
+
+.poke_card{
+height: 250px;
+padding-top: 20px;
+padding-left: 10px;
+padding-right: 20px;
+width: 100%;
+}
+
+.poke_card_character{
+  max-width:100px;
+  height:auto;
+  margin: auto;
+  display: block;
+  width: 45%;
+}
+
+.poke_card_img{
+  height:auto;
+  margin: auto;
+  display: block;
+  /* width: 55%; */
+  border-radius: inherit;
+}
+
+.poke_card_block{
+width: 150px;
+}
+
+.poke_card_cp{
+float: right;
+}
+
+.poke_card_cp span{
+font-size: 20px;
+}
+
+.poke_card_name{
+font-size: 15px;
+}
