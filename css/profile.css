@@ -80,6 +80,10 @@ padding-right: 20px;
 width: 100%;
 }
 
+.poke_card_width{
+width: 190px;
+}
+
 .poke_card_character{
   max-width:100px;
   height:auto;
@@ -109,5 +113,22 @@ font-size: 20px;
 }
 
 .poke_card_name{
-font-size: 15px;
+font-size: 18px;
+}
+
+.poke_card_bar{
+width: 90%; 
+margin: 0 auto
+}
+
+.move_text{
+font-size: 12px;
+}
+
+.poke_iv_level{
+font-size: 14px;
+}
+
+.poke_card_top{
+margin-bottom: -20px;
 }
