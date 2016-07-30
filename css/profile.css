@@ -6,7 +6,7 @@ height: 90%;
 .main{
 
 width: 100%;
-height: 130%;
+height: 105%;
 margin-top: 53px;
 
 }
@@ -25,7 +25,7 @@ background-color: #4A96AD;
 
 .profile_cards{
 
-width: 84.16%;
+width: auto;
 height: 100%;
 float: right;
 
@@ -38,8 +38,9 @@ float: right;
 }
 
 .profile_content{
-padding-left: 10px;
-padding-top: 10px;
+/*padding-left: 10px;*/
+/*padding-top: 10px;*/
+
 }
 
 .poke_row{
@@ -77,11 +78,13 @@ height: 250px;
 padding-top: 20px;
 padding-left: 10px;
 padding-right: 20px;
-width: 100%;
+/*width: 100%;*/
+min-width: 100px !important;
 }
 
 .poke_card_width{
 width: 190px;
+min-width: 100px !important;
 }
 
 .poke_card_character{
@@ -90,6 +93,7 @@ width: 190px;
   margin: auto;
   display: block;
   width: 45%;
+  min-width: 100px !important;
 }
 
 .poke_card_img{
@@ -98,10 +102,12 @@ width: 190px;
   display: block;
   /* width: 55%; */
   border-radius: inherit;
+  min-width: 100px !important;
 }
 
 .poke_card_block{
 width: 150px;
+min-width: 100px !important;
 }
 
 .poke_card_cp{
@@ -131,4 +137,26 @@ font-size: 14px;
 
 .poke_card_top{
 margin-bottom: -20px;
+}
+
+.rounded-profile {
+    border-radius: 50%;
+    border: 10px solid white;
+    /*padding: 20px; */
+    width: 180px;
+    height: 180px; 
+    margin-top:30px;
+}
+
+.sidebar {
+  background-color: #393C3E !important; 
+}
+.profile-name {
+  color:white;
+  font-size:15px;
+  padding-top:10px;
+}
+.profile-text {
+  color:white;
+  
 }

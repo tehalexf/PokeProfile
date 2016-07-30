@@ -1,14 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="http:/cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
+      <script src="dist/semantic.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="css/profile.css">
 <link rel="stylesheet" href="http:/cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
 <script src="dist/semantic.min.js"></script>
 
-<body>
+<body >
 
 <div class="ui fixed inverted menu">
-    <div class="ui container">
+    <div class="ui container" style="border-bottom: 10px solid #1B1C1D">
       <a href="#" class="header item">
         <img class="logo" src="http://semantic-ui.com/examples/assets/images/logo.png" style="margin-right: 10px;">
         Pokemon Go
@@ -35,9 +40,125 @@
     </div>
   </div>
 
-	<div class="main">
+	<div class="main" >
 	
 
+  <div class="ui bottom attached segment pushable" >
+  <div class="ui visible inverted left vertical sidebar menu" style="padding-top:10px">
+  <div class="cen_text">
+  <img src="images/valor.png" width="180px" height="180px" class="rounded-profile">
+  <div class="profile-name"> SomeLongUsername</div>
+  <br/>
+  <div class="profile-text row">
+  <span style="font-size:18px">Lv. </span><span style="font-size:24px">31 </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup style="font-size:16px">151</sup><span style="font-size:25px">/</span><sub style="font-size:16px">151</sub> &nbsp; <span style="font-size:18px">Caught</span>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="profile-text">
+  More Icon choices and stats <br/> coming soon...
+  </div>
+  </div>
+
+
+  </div>
+  </div>
+  <div class="pusher" style="background: #D1F1FC;">
+    <div class="ui basic segment" >
+
+
+
+
+<!--       <h3 class="ui header">Application Content</h3>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p> -->
+
+
+
+
+			<div class="profile_content">
+			
+				<h1 >POKEMON INVENTORY</h1>
+
+			
+	
+				
+				
+				
+			
+				<div class="poke_card" >
+				
+						<div style="float: left; width: 20%;  min-width:100px">
+							<div style="width: 190px; min-width:100px" class="ui card poke_card_block">
+							  <div style="margin-bottom: -20px" class="content">
+								<p style="float: left" class="poke_card_name"> Abra <i class="empty star icon"></i></p>
+								<div style="float: right; margin-top: 3px;" class="poke_card_cp">CP<span>43</span></div>
+							  </div>
+							  <div class="im">
+								<img class="poke_card_img" src="http://www.serebii.net/pokemongo/pokemon/063.png">
+							  </div>
+							  <div style="height: 53px" class="content">
+									  <div style="margin: 0 auto" class="ui small indicating progress  poke_card_bar" data-percent="70">
+										<div class="bar" style="transition-duration: 300ms; width: 70%;">
+											<div class="progress">70%</div>
+										</div>
+										<div class="label">Grass</div>
+									  </div>
+							  </div>
+							  <div style="height: 20px" class="content">
+								  <div style="margin-top: -10px">
+										<div style="float: left; width: 50%;">
+											<p class="move_text" style="text-align: center">Move 1</p>
+										</div>
+										
+										<div style="float: left; width: 50%;" >
+											<p class="move_text" style="text-align: center">Move 2</p>
+										</div>
+									</div>
+							  </div>
+							  <div style="height: 20px" class="content">
+							  
+								<div style="width: 70%; margin: auto; margin-top: -7px" >
+									<div style="float: left; width: 33%">
+										<i style="font-size: 14px;" class="mdi mdi-sword"> 10</i> 
+									</div>
+									
+									<div style="float: left; width: 33%">
+										<i style="font-size: 14px;" class="mdi mdi-shield-outline"> 10</i> 
+									</div>
+								  
+									<div style="float: left; width: 33%">
+										<i style="font-size: 14px;" class="mdi mdi-flash"> 10</i> 
+									</div>
+								</div>
+								
+							  </div>
+							  
+
+							</div>
+						</div>
+						
+						
+						
+				
+						
+				
+				</div>
+				
+			
+			</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 
 
 		<div class="profile_stats">
 
@@ -54,384 +175,13 @@
 			</div>
 
 		</div>
+		 -->
+<!-- 		<div class="profile_cards">
 		
-		<div class="profile_cards">
-		
-			<div class="profile_content">
-			
-				<h1 class="cen_text" >POKEMON</h1>
 
-			
-				<div class="poke_row">
-				
-						  <div style="float: left; width: 20%;">
-						  <p class="cen_text" >CP<span>113</span></p>
-						  <img class="poke_character" src="http://www.serebii.net/pokemongo/pokemon/063.png">
-						  <p class="cen_text" >Abra</p>
-							  <div style="margin: 0 auto" class="ui small indicating progress active prog_bar" data-percent="70">
-								<div class="bar" style="transition-duration: 300ms; width: 70%;"></div>
-								<div class="label"></div>
-							  </div>
-						  </div>
-						  
-						  <div style="float: left; width: 20%;">
-						  <p class="cen_text" >CP<span>187</span></p>
-						  <img class="poke_character" src="http://www.serebii.net/pokemongo/pokemon/074.png">
-						  <p class="cen_text" >Geodude</p>
-							  <div style="margin: 0 auto" class="ui small indicating progress active prog_bar" data-percent="30">
-								<div class="bar" style="transition-duration: 300ms; width: 30%;"></div>
-								<div class="label"></div>
-							  </div>
-						  </div>
-						  
-						  <div style="float: left; width: 20%;">
-						  <p class="cen_text">CP<span>283</span></p>
-						  <img class="poke_character" src="http://www.serebii.net/pokemongo/pokemon/066.png">
-						  <p class="cen_text" >Machop</p>
-							  <div style="margin: 0 auto" class="ui small indicating progress active prog_bar" data-percent="90">
-								<div class="bar" style="transition-duration: 300ms; width: 90%;"></div>
-								<div class="label"></div>
-							  </div>
-						  </div>
-						  
-						  <div style="float: left; width: 20%;">
-						  <p class="cen_text" >CP<span>202</span></p>
-						  <img class="poke_character" src="http://www.serebii.net/pokemongo/pokemon/090.png">
-						  <p class="cen_text" >Shellder</p>
-							  <div style="margin: 0 auto" class="ui small indicating progress active prog_bar" data-percent="50">
-								<div class="bar" style="transition-duration: 300ms; width: 50%;"></div>
-								<div class="label"></div>
-							  </div>
-						  </div>
-						  
-						  <div style="float: left; width: 20%;">
-						  <p class="cen_text" >CP<span>43</span></p>
-						  <img class="poke_character" src="http://www.serebii.net/pokemongo/pokemon/129.png">
-						  <p class="cen_text" >Magikarp</p>
-							  <div style="margin: 0 auto" class="ui small indicating progress active prog_bar" data-percent="20">
-								<div class="bar" style="transition-duration: 300ms; width: 20%;"></div>
-								<div class="label"></div>
-							  </div>
-						  </div>
-						  
-				</div>
-				
-				
-				<div class="poke_row">
-				
-						  <div style="float: left; width: 20%;">
-						  <p class="cen_text" >CP<span>113</span></p>
-						  <img class="poke_character" src="http://www.serebii.net/pokemongo/pokemon/063.png">
-						  <p class="cen_text" >Abra</p>
-							  <div style="margin: 0 auto" class="ui small indicating progress active prog_bar" data-percent="70">
-								<div class="bar" style="transition-duration: 300ms; width: 70%;"></div>
-								<div class="label"></div>
-							  </div>
-						  </div>
-						  
-						  <div style="float: left; width: 20%;">
-						  <p class="cen_text" >CP<span>187</span></p>
-						  <img class="poke_character" src="http://www.serebii.net/pokemongo/pokemon/074.png">
-						  <p class="cen_text" >Geodude</p>
-							  <div style="margin: 0 auto" class="ui small indicating progress  prog_bar" data-percent="30">
-								<div class="bar" style="transition-duration: 300ms; width: 30%;"></div>
-								<div class="label"></div>
-							  </div>
-						  </div>
-						  
-						  <div style="float: left; width: 20%;">
-						  <p class="cen_text">CP<span>283</span></p>
-						  <img class="poke_character" src="http://www.serebii.net/pokemongo/pokemon/066.png">
-						  <p class="cen_text" >Machop</p>
-							  <div style="margin: 0 auto" class="ui small indicating progress  prog_bar" data-percent="90">
-								<div class="bar" style="transition-duration: 300ms; width: 90%;"></div>
-								<div class="label"></div>
-							  </div>
-						  </div>
-						  
-						  <div style="float: left; width: 20%;">
-						  <p class="cen_text" >CP<span>202</span></p>
-						  <img class="poke_character" src="http://www.serebii.net/pokemongo/pokemon/090.png">
-						  <p class="cen_text" >Shellder</p>
-							  <div style="margin: 0 auto" class="ui small indicating progress  prog_bar" data-percent="50">
-								<div class="bar" style="transition-duration: 300ms; width: 50%;"></div>
-								<div class="label"></div>
-							  </div>
-						  </div>
-						  
-						  <div style="float: left; width: 20%;">
-						  <p class="cen_text" >CP<span>43</span></p>
-						  <img class="poke_character" src="http://www.serebii.net/pokemongo/pokemon/129.png">
-						  <p class="cen_text" >Magikarp</p>
-							  <div style="margin: 0 auto" class="ui small indicating progress  prog_bar" data-percent="20">
-								<div class="bar" style="transition-duration: 300ms; width: 20%;"></div>
-								<div class="label"></div>
-							  </div>
-						  </div>
-						  
-				</div>
-
-			
-				<div class="poke_card" >
-				
-						<div style="float: left; width: 20%">
-							<div style="width: 190px" class="ui card poke_card_block">
-							  <div style="margin-bottom: -20px" class="content">
-								<p style="float: left" class="poke_card_name"> Abra <i class="empty star icon"></i></p>
-								<div style="float: right; margin-top: 3px;" class="poke_card_cp">CP<span>43</span></div>
-							  </div>
-							  <div class="im">
-								<img class="poke_card_img" src="http://www.serebii.net/pokemongo/pokemon/063.png">
-							  </div>
-							  <div style="height: 53px" class="content">
-									  <div style="margin: 0 auto" class="ui small indicating progress  poke_card_bar" data-percent="70">
-										<div class="bar" style="transition-duration: 300ms; width: 70%;">
-											<div class="progress">70%</div>
-										</div>
-										<div class="label">Grass</div>
-									  </div>
-							  </div>
-							  <div style="height: 20px" class="content">
-								  <div style="margin-top: -10px">
-										<div style="float: left; width: 50%;">
-											<p class="move_text" style="text-align: center">Move 1</p>
-										</div>
-										
-										<div style="float: left; width: 50%;" >
-											<p class="move_text" style="text-align: center">Move 2</p>
-										</div>
-									</div>
-							  </div>
-							  <div style="height: 20px" class="content">
-							  
-								<div style="width: 70%; margin: auto; margin-top: -7px" >
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-sword"> 10</i> 
-									</div>
-									
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-shield-outline"> 10</i> 
-									</div>
-								  
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-flash"> 10</i> 
-									</div>
-								</div>
-								
-							  </div>
-							  
-
-							</div>
-						</div>
-						
-						<div style="float: left; width: 20%">
-							<div style="width: 190px" class="ui card poke_card_block">
-							  <div style="margin-bottom: -20px" class="content">
-								<p style="float: left" class="poke_card_name"> Abra <i class="empty star icon"></i></p>
-								<div style="float: right; margin-top: 3px;" class="poke_card_cp">CP<span>43</span></div>
-							  </div>
-							  <div class="im">
-								<img class="poke_card_img" src="http://www.serebii.net/pokemongo/pokemon/063.png">
-							  </div>
-							  <div style="height: 53px" class="content">
-									  <div style="margin: 0 auto" class="ui small indicating progress  poke_card_bar" data-percent="70">
-										<div class="bar" style="transition-duration: 300ms; width: 70%;">
-											<div class="progress">70%</div>
-										</div>
-										<div class="label">Grass</div>
-									  </div>
-							  </div>
-							  <div style="height: 20px" class="content">
-								  <div style="margin-top: -10px">
-										<div style="float: left; width: 50%;">
-											<p class="move_text" style="text-align: center">Move 1</p>
-										</div>
-										
-										<div style="float: left; width: 50%;" >
-											<p class="move_text" style="text-align: center">Move 2</p>
-										</div>
-									</div>
-							  </div>
-							  <div style="height: 20px" class="content">
-							  
-								<div style="width: 70%; margin: auto; margin-top: -7px" >
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-sword"> 10</i> 
-									</div>
-									
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-shield-outline"> 10</i> 
-									</div>
-								  
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-flash"> 10</i> 
-									</div>
-								</div>
-								
-							  </div>
-							  
-
-							</div>
-						</div>
-						
-						<div style="float: left; width: 20%">
-							<div style="width: 190px" class="ui card poke_card_block">
-							  <div style="margin-bottom: -20px" class="content">
-								<p style="float: left" class="poke_card_name"> Abra <i class="empty star icon"></i></p>
-								<div style="float: right; margin-top: 3px;" class="poke_card_cp">CP<span>43</span></div>
-							  </div>
-							  <div class="im">
-								<img class="poke_card_img" src="http://www.serebii.net/pokemongo/pokemon/063.png">
-							  </div>
-							  <div style="height: 53px" class="content">
-									  <div style="margin: 0 auto" class="ui small indicating progress  poke_card_bar" data-percent="70">
-										<div class="bar" style="transition-duration: 300ms; width: 70%;">
-											<div class="progress">70%</div>
-										</div>
-										<div class="label">Grass</div>
-									  </div>
-							  </div>
-							  <div style="height: 20px" class="content">
-								  <div style="margin-top: -10px">
-										<div style="float: left; width: 50%;">
-											<p class="move_text" style="text-align: center">Move 1</p>
-										</div>
-										
-										<div style="float: left; width: 50%;" >
-											<p class="move_text" style="text-align: center">Move 2</p>
-										</div>
-									</div>
-							  </div>
-							  <div style="height: 20px" class="content">
-							  
-								<div style="width: 70%; margin: auto; margin-top: -7px" >
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-sword"> 10</i> 
-									</div>
-									
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-shield-outline"> 10</i> 
-									</div>
-								  
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-flash"> 10</i> 
-									</div>
-								</div>
-								
-							  </div>
-							  
-
-							</div>
-						</div>
-						
-						<div style="float: left; width: 20%">
-							<div style="width: 190px" class="ui card poke_card_block">
-							  <div style="margin-bottom: -20px" class="content">
-								<p style="float: left" class="poke_card_name"> Abra <i class="empty star icon"></i></p>
-								<div style="float: right; margin-top: 3px;" class="poke_card_cp">CP<span>43</span></div>
-							  </div>
-							  <div class="im">
-								<img class="poke_card_img" src="http://www.serebii.net/pokemongo/pokemon/063.png">
-							  </div>
-							  <div style="height: 53px" class="content">
-									  <div style="margin: 0 auto" class="ui small indicating progress  poke_card_bar" data-percent="70">
-										<div class="bar" style="transition-duration: 300ms; width: 70%;">
-											<div class="progress">70%</div>
-										</div>
-										<div class="label">Grass</div>
-									  </div>
-							  </div>
-							  <div style="height: 20px" class="content">
-								  <div style="margin-top: -10px">
-										<div style="float: left; width: 50%;">
-											<p class="move_text" style="text-align: center">Move 1</p>
-										</div>
-										
-										<div style="float: left; width: 50%;" >
-											<p class="move_text" style="text-align: center">Move 2</p>
-										</div>
-									</div>
-							  </div>
-							  <div style="height: 20px" class="content">
-							  
-								<div style="width: 70%; margin: auto; margin-top: -7px" >
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-sword"> 10</i> 
-									</div>
-									
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-shield-outline"> 10</i> 
-									</div>
-								  
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-flash"> 10</i> 
-									</div>
-								</div>
-								
-							  </div>
-							  
-
-							</div>
-						</div>
-
-						<div style="float: left; width: 20%">
-							<div style="width: 190px" class="ui card poke_card_block">
-							  <div style="margin-bottom: -20px" class="content">
-								<p style="float: left" class="poke_card_name"> Abra <i class="empty star icon"></i></p>
-								<div style="float: right; margin-top: 3px;" class="poke_card_cp">CP<span>43</span></div>
-							  </div>
-							  <div class="im">
-								<img class="poke_card_img" src="http://www.serebii.net/pokemongo/pokemon/063.png">
-							  </div>
-							  <div style="height: 53px" class="content">
-									  <div style="margin: 0 auto" class="ui small indicating progress  poke_card_bar" data-percent="70">
-										<div class="bar" style="transition-duration: 300ms; width: 70%;">
-											<div class="progress">70%</div>
-										</div>
-										<div class="label">Grass</div>
-									  </div>
-							  </div>
-							  <div style="height: 20px" class="content">
-								  <div style="margin-top: -10px">
-										<div style="float: left; width: 50%;">
-											<p class="move_text" style="text-align: center">Move 1</p>
-										</div>
-										
-										<div style="float: left; width: 50%;" >
-											<p class="move_text" style="text-align: center">Move 2</p>
-										</div>
-									</div>
-							  </div>
-							  <div style="height: 20px" class="content">
-							  
-								<div style="width: 70%; margin: auto; margin-top: -7px" >
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-sword"> 10</i> 
-									</div>
-									
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-shield-outline"> 10</i> 
-									</div>
-								  
-									<div style="float: left; width: 33%">
-										<i style="font-size: 14px;" class="mdi mdi-flash"> 10</i> 
-									</div>
-								</div>
-								
-							  </div>
-							  
-
-							</div>
-						</div>						
-						
-				
-				</div>
-				
-			
-			</div>
 		
 		</div>
-		
+		 -->
 
 	</div>
 
