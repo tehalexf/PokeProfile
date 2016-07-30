@@ -1,43 +1,123 @@
-<link rel="stylesheet" href="http:/cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
-<script src="dist/semantic.min.js"></script>
-<link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="css/login.css">
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="http:/cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
+      <script src="dist/semantic.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+      <link rel="stylesheet" type="text/css" href="css/login.css">
+   </head>
+   <body>
+      <div class="login_con">
+         <h3 class="mid_text" >PokeProfile</h3>
+         <div style="margin: auto;" class="ui card">
+            <div class="content">
+               <div style="margin: auto; width: 90%; padding-left: 20px;" class="ui input">
+                  <input id="username" type="text" placeholder="Username">
+               </div>
+            </div>
+            <div class="content">
+               <div style="margin: auto; width: 90%; padding-left: 20px;" class="ui input">
+                  <input id="password" type="password" placeholder="Password">
+               </div>
+            </div>
+            <button class="ui button" id="submit">Get Profile</button>
+         </div>
+         <br/>
+         <div id= "errormsg" class="ui grid" style="display:none">
+            <div class="five wide column"></div>
+            <div class="six wide column mid_text">
+               <div class="ui negative message">
+                  <div class="header">
+                     An error has occured...
+                  </div>
+                  <p id="errordet">Unable to login.</p>
+               </div>
+            </div>
+            <div class="five wide column"></div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         $("#submit").click(function() {
 
-<html>
 
-<body>
+             var username = $("#username").val();
+             var password = $("#password").val();
+             if (username == "" || password == "")
+                 return;
 
-<div class="login_con">
-<h3 class="mid_text" >PokeProfile</h3>
-	<div style="margin: auto;" class="ui card">
+             if ($("#submit").hasClass("loading") || $("#submit").hasClass("disabled"))
+                 return;
 
-	  <div class="content">
-		<div style="margin: auto; width: 90%; padding-left: 20px;" class="ui input">
-		  <input type="text" placeholder="Username">
-		</div>
-	  </div>
+             $("#submit").addClass("loading");
 
-	  <div class="content">
-		<div style="margin: auto; width: 90%; padding-left: 20px;" class="ui input">
-		  <input type="password" placeholder="Password">
-		</div>
-	  </div>
+             var data = {
+                 username: username,
+                 password: password
+             }
 
-	  <button class="ui button" type="submit">Get Profile</button>
-	</div>
+             var data = {};
+             data.username = username;
+             data.password = password;
 
-</div>
+             console.log(data)
 
-	
+             $.ajax({
+                 type: 'POST',
+                 data: JSON.stringify(data),
+                 contentType: 'application/json',
+                 url: 'http://pokemon.rhocode.com:81/api/retrieve',
+                 success: function(data) {
 
+                     var dat = JSON.parse(JSON.stringify(data));
 
-</body>
+                     console.log(dat.status)
 
+                     if (dat.status == "success") {
+
+                         $("#submit").removeClass("loading");
+                         $("#submit").addClass("disabled");
+                         $("#submit").html("Success! Generating page...");
+
+                     } else {
+                         console.log("DEBUGGY")
+                         console.log(dat.reason)
+
+                         if (dat.reason && dat.reason == "invalidLogin") {
+                             $("#errordet").html("Please check your username and password.");
+                             $("#errormsg").fadeIn();
+                             $("#submit").removeClass("loading");
+                             setTimeout(function() {
+                                 $("#errormsg").fadeOut();
+                             }, 4000);
+                         } else if (dat.reason && dat.reason == "lockedOut") {
+                             console.log("AAAAA");
+                             $("#errordet").html("Your account is locked. You may be locked out for 15 minutes.");
+                             $("#errormsg").fadeIn();
+                             $("#submit").removeClass("loading");
+                             setTimeout(function() {
+                                 $("#errormsg").fadeOut();
+                             }, 4000);
+                         }
+
+                     }
+
+                 },
+                 error: function(textStatus, errorThrown) {
+                     console.log("ERROR!")
+                     $("#submit").removeClass("loading");
+                 }
+
+             });
+
+         });
+         
+         
+      </script>
+   </body>
 </html>
-
-
 <!-- 
-background-position: center; background-size: 80% 120%; background-repeat: no-repeat; background-position: 8px 8px; center; background-image: url('http://orig09.deviantart.net/5d93/f/2011/345/1/b/pokeball_vector_by_mangotangofox-d4ivdg0.png');
-
-<div class="ball"></div>
--->
+   background-position: center; background-size: 80% 120%; background-repeat: no-repeat; background-position: 8px 8px; center; background-image: url('http://orig09.deviantart.net/5d93/f/2011/345/1/b/pokeball_vector_by_mangotangofox-d4ivdg0.png');
+   
+   <div class="ball"></div>
+   -->
