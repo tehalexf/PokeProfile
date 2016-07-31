@@ -163,6 +163,14 @@
                              setTimeout(function() {
                                  $("#errormsg").fadeOut();
                              }, 4000);
+                         }  else if (dat.reason && dat.reason == "noavatar") {
+                             
+                             $("#errordet").html("Please name your account and create a character first.");
+                             $("#errormsg").fadeIn();
+                             $("#submit").removeClass("loading");
+                             setTimeout(function() {
+                                 $("#errormsg").fadeOut();
+                             }, 4000);
                          }  else {
                              
                              $("#errordet").html("Unknown error. Please try again later.");
