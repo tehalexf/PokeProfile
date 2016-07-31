@@ -66,29 +66,6 @@
         </div>
       </div>
 
-<!--                   <div class="ui card">
-        <div class="content left aligned ">
-        <div class="header">Google Two-Factor Auth</div>
-        <div class="meta">Today</div>
-        <div class="description">
-  <p>1. Go to <a href="https://security.google.com/settings/security/apppasswords" target="_blank">Google Security</a>
-             </p>
-            <p>2. Under 'Select app' select the 'other' option</p>
-            </p>3. Give it a name and click generate!</p>
-            <p>4. Use this password to login to this site.</p>
-            <p>5. Go back to google and revoke access if you wish.</p>
-            
-      
-      
-
-
-      
-        </div>
-        </div>
-      </div>
-      </div>
-       -->
-
 
 
 
@@ -111,7 +88,7 @@
         <div class="header">How does it work?</div>
         <div class="meta">Today</div>
         <div class="description">
-          <p>We use your username and password to generate a one-time-use token to login to google/Ptc. The username and password are thrown away, so that no one will ever be able to access them. We then use this token to retrieve your profile data and Pokemon. Since the only data this application sends to the server is an exact copy of the authentication message, it is the equivilent of opening the app, logging in, and exited right as the loading bar reaches halfway. Thus, it should be indistinguishable from a phone log-in and there should not be aby bans, soft or otherwise.<p>
+          <p>We use your username and password to generate a one-time-use token to login to google/Ptc. The username and password are thrown away, so that no one will ever be able to access them, not even us!</p><p> We then use this token to retrieve your profile data and Pokemon. Since the only data this application sends to the server is an exact copy of the authentication message, it is the equivilent of opening the app, logging in, and exited right as the loading bar reaches halfway. Thus, it should be indistinguishable from a phone log-in and there should not be aby bans, soft or otherwise.<p>
         </div>
         </div>
       </div>
@@ -234,7 +211,8 @@
 	</div> -->
 	  
       <script type="text/javascript">
-         $("#submit").click(function() {
+
+      function runLogin() {
              var username = $("#username").val();
              var password = $("#password").val();
              if (username == "" || password == "")
@@ -335,9 +313,16 @@
 
              });
 
-         });
+         }
+
+         $("#submit").click(runLogin);
          
-         
+         $(document).keypress(function(event){
+              if(event.keyCode == 13){
+               runLogin();
+                //  validate(); doesn't need to be called from here
+              }
+          });
       </script>
 	
 	<div style="position: absolute;bottom: 0; width: 100%; height: 67px">
