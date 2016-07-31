@@ -2,20 +2,45 @@
 body {
 width: 100%;
 height: 100%;
+background-image: url("http://orig12.deviantart.net/c2ed/f/2014/051/7/b/twitch_plays_pokemon_by_darrengeers-d779rns.jpg");
+background-position: center; 
+}
 
+.logo{
+
+}
+
+.main_left{
+float: left;
+width: 50%;
+top: 32%;
+position: relative;
+}
+
+.main_right{
+float: left;
+width: 50%;
+top: 30%;
+position: relative;
 }
 
 .login_con{
 margin: auto;
 width: 50%;
-top: 42%;
-position: relative;
+
+}
+
+.letter_con{
+margin: auto;
+width: 70%;
+
 }
 
 .mid_text{
 text-align: center;
 top: 80%;
 position: relative;
+color: white;
 }
 
 .log_btn{
@@ -27,11 +52,19 @@ width: 50%;
  background-position: center;
 }
 
+#errormsg {
+margin: auto; 
+width: 80%;
+}
 
+.pokeball{
+
+margin-top: 40px;
+
+}
 
 
 .ball {
-	margin-left: -400px;
     background-image: url("https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG");
     background-position:50% 50%; 
     background-size:cover;  
@@ -39,8 +72,9 @@ width: 50%;
     width: 80px;
     height: 80px;
     position: absolute;
-    bottom: 0;
-    left: 50%;
+	top: 400px;
+    left: 32%;
+
     
     -webkit-animation-name: bounceball;
     -webkit-animation-duration: 1s;
@@ -61,7 +95,7 @@ width: 50%;
     animation-fill-mode: none;
 }
  @-webkit-keyframes bounceball {
-    from { bottom: 0; height: 90px; }
-    10%  { bottom: 0; height: 100px; }
-    to   { bottom: 30%; }
+    from { top: 31.5%; height: 90px; }
+    10%  { top: 31.5%; height: 100px; }
+    to   { top: 100px; }
 }
