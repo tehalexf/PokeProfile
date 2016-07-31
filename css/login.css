@@ -2,8 +2,8 @@
 body {
 width: 100%;
 height: 100%;
-background-image: url("http://orig12.deviantart.net/c2ed/f/2014/051/7/b/twitch_plays_pokemon_by_darrengeers-d779rns.jpg");
-background-position: center; 
+background-image: url("../background.png");
+background-position: 50% 25%;
 }
 
 .logo{
@@ -13,7 +13,7 @@ background-position: center;
 .main_left{
 float: left;
 width: 50%;
-top: 32%;
+top: 15%;
 position: relative;
 }
 
@@ -33,6 +33,12 @@ width: 50%;
 .letter_con{
 margin: auto;
 width: 70%;
+
+}
+
+.google_con{
+
+width: 140%;
 
 }
 
@@ -95,7 +101,7 @@ margin-top: 40px;
     animation-fill-mode: none;
 }
  @-webkit-keyframes bounceball {
-    from { top: 31.5%; height: 90px; }
-    10%  { top: 31.5%; height: 100px; }
-    to   { top: 100px; }
+    from { top: 26%; height: 90px; }
+    10%  { top: 26%; height: 100px; }
+    to   { top: 30px; }
 }
