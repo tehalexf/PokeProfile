@@ -115,6 +115,13 @@
                          $("#submit").addClass("disabled");
                          $("#submit").html("Success! Generating page...");
 
+                          setTimeout(function() {
+                                  window.location.href = "/mockup.html#/?id=" + dat.username;
+
+                                 
+
+                             }, 2000);
+
                      } else {
                          console.log("DEBUGGY")
                          console.log(dat.reason)
@@ -127,8 +134,24 @@
                                  $("#errormsg").fadeOut();
                              }, 4000);
                          } else if (dat.reason && dat.reason == "lockedOut") {
-                             console.log("AAAAA");
+                             
                              $("#errordet").html("Your account is locked. You may be locked out for 15 minutes.");
+                             $("#errormsg").fadeIn();
+                             $("#submit").removeClass("loading");
+                             setTimeout(function() {
+                                 $("#errormsg").fadeOut();
+                             }, 4000);
+                         } else if (dat.reason && dat.reason == "google2fa") {
+                             
+                             $("#errordet").html("Your gmail account has two-factor authentication. Follow the instructions below.");
+                             $("#errormsg").fadeIn();
+                             $("#submit").removeClass("loading");
+                             setTimeout(function() {
+                                 $("#errormsg").fadeOut();
+                             }, 4000);
+                         }  else {
+                             
+                             $("#errordet").html("Unknown error. Please try again later.");
                              $("#errormsg").fadeIn();
                              $("#submit").removeClass("loading");
                              setTimeout(function() {
