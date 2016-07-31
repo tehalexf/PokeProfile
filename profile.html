@@ -71,7 +71,7 @@
                         <h1 >POKEMON INVENTORY</h1>
                         <div class="ui fluid container">
                            <div ng-controller="pokemonController" class="ui link cards">
-                              <div ng-repeat="pokemon in pokemons" style="width: 210px; min-width:190px" class="ui raised card poke_card_block">
+                              <div ng-repeat="pokemon in pokemons" style="width: 210px; min-width:190px {{pokemon.foil}}" class="ui raised card poke_card_block">
                                  <div style="margin-bottom: -20px" class="content">
                                     <p style="float: left" class="poke_card_name"> {{pokemon.name}} <i class="{{pokemon.favorite}} star icon"></i></p>
                                     <div style="float: right; margin-top: 3px;" class="poke_card_cp">CP<span>{{pokemon.cp}}</span></div>

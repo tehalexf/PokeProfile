@@ -1025,7 +1025,12 @@ app.controller("userController", function($scope, $location, UserService) {
                 } else {
                     entry.favorite = "empty";
                 }
-
+                console.log(entry)
+                if (entry.iv_atk == 15 && entry.iv_def == 15 && entry.iv_sta == 15) {
+                    entry.foil = ";background-image: url('images/foil.png')"
+                } else {
+                    entry.foil = ""
+                }
                 entry.move_1 = moveList[entry.move_1]
                 entry.move_2 = moveList[entry.move_2]
                 var leftSide = ((entry.cpMultiplier + entry.additionalCPMultiplier) / 0.095)

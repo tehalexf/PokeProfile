@@ -3,7 +3,8 @@ body {
 width: 100%;
 height: 100%;
 background-image: url("../background.png");
-background-position: 50% 25%;
+background-position: center 50%; 
+
 }
 
 .logo{
@@ -104,4 +105,11 @@ margin-top: 40px;
     from { top: 26%; height: 90px; }
     10%  { top: 26%; height: 100px; }
     to   { top: 30px; }
+}
+
+.holder {
+  height: 400px
+}
+.holder .middle {
+  height: 100%
 }
