@@ -1,4 +1,6 @@
 
+ @font-face { font-family: PressStart2P; src: url('PressStart2P.ttf'); } 
+
 body {
 height: 90%;
 }
@@ -21,6 +23,23 @@ float: left;
 height: 100%;
 background-color: #4A96AD;
 
+}
+
+.profile_card{
+background-color: #50545a;
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 10px;
+padding-bottom: 10px;
+border-radius: 15px;
+border: 1px solid #9c9c9c;
+
+}
+
+.profile_card_stats{
+margin-top: 10px;
+background-color: grey;
+padding-bottom: 10px;
 }
 
 .profile_cards{
@@ -146,7 +165,7 @@ margin-bottom: -20px;
     /*padding: 20px; */
     width: 180px;
     height: 180px; 
-    margin-top:30px;
+    margin-top:20px;
 }
 
 .sidebar {
@@ -161,7 +180,93 @@ margin-bottom: -20px;
   color:white;
   
 }
+
+.card_style{
+background-image: url("images/white.png");
+}
+
+.new_card{
+ background-image: url('images/glow.png');
+}
+
+.logo{
+font-family: "PressStart2P";
+font-weight: 1700;
+font-size: 35px;
+color: yellow;
+  -webkit-text-stroke: 1.5px #466CC7;
+    text-shadow:
+    3px 3px 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+	
+}
+
 /*
 .card {
   width: 60px 
 }*/
+
+.pokemon_cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+}
+
+.cards_width{
+margin-left: 260px;
+}
+
+.profile_header{
+display: none;
+}
+
+@media (max-width: 500px) {
+
+.mobile_chk{
+display: none;
+}
+
+.cards_width{
+margin-left: 0px;
+}
+
+.mobile_title{
+font-size: 25px;
+text-align: center;
+margin-left: -3%;
+}
+
+.profile_header{
+left: 11%;
+display: block;
+margin: auto;
+width: 80%;
+height: 80px;
+background-color: white;
+position: fixed;
+z-index: 10;
+border-radius: 5px;
+border: 1px solid #fff;
+}
+
+.profile_inside{
+margin: auto;
+width: 90%;
+height: 70%;
+
+}
+
+
+
+
+}
+

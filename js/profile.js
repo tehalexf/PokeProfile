@@ -945,7 +945,6 @@ moveList = {
 
 app.service('UserService', function() {
 
-
     this.get = function(id) {
 
         if (!id)
@@ -954,7 +953,7 @@ app.service('UserService', function() {
         $.ajax({
             type: 'GET',
             contentType: 'application/json',
-            url: 'http://pokemon.rhocode.com:81/api/getPokemon/' + id,
+            url: 'https://pokemon.rhocode.com/api/getPokemon/' + id,
             success: function(data) {
 
                 var dat = JSON.parse(JSON.stringify(data));
@@ -976,7 +975,7 @@ function generatePictureURL(number) {
         num = "00" + num;
     else if (num.length == 2)
         num = "0" + num;
-    return "http://www.serebii.net/pokemongo/pokemon/" + num + ".png"
+    return "https://tehalexf.github.io/img_host/imgs/" + num + ".png"
 }
 
 
@@ -988,14 +987,18 @@ app.controller("userController", function($scope, $location, UserService) {
     $.ajax({
         type: 'GET',
         contentType: 'application/json',
-        url: 'http://pokemon.rhocode.com:81/api/getPokemon/' + $location.search().id,
+        url: 'https://pokemon.rhocode.com/api/getPokemon/' + $location.search().id,
         success: function(data) {
 
             var dat = JSON.parse(JSON.stringify(data));
 
             $scope.username = dat.username;
 
-            console.log(dat)
+      
+              if(!(dat.username)) {
+                  alert("Invalid Profile!")                 
+               return
+             }
 
             $scope.level = dat.level;
 
@@ -1071,7 +1074,7 @@ app.controller("pokemonController", function($scope, UserService) {
     } else if (team == 2) {
         $scope.profile = "instinct.png";
     } else if (team == 3) {
-        $scope.profile = "valor.pnh";
+        $scope.profile = "valor.png";
     }
 
     $scope.caught = "30";

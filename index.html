@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-81820417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+   <script type="text/javascript">
+    var host = "yoursite.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+</script>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
       <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
+      <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
       <script src="dist/semantic.min.js"></script>
       <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
       <link rel="stylesheet" type="text/css" href="css/login.css">
@@ -21,26 +37,86 @@
            <div class="ui middle aligned centered grid">
         <div class="row">
         <div class="one wide column"> </div>
-          <div class="five wide column">
+          <div class="mob_login">
             
 
 
 
-         <div  class="ui card">
+         <div  class="ui card centered">
+
+
                       <h3 style="padding-top:10px" class="ui">PokemonGo Login</h3>
+ 
 
             <div class="content">
+
+            <div class="grouped field left aligned ">
+    <label>Use my:</label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input id="checkbox1" type="radio" name="example2" checked="checked">
+        <label>Pokemon Trainer Club Account</label>
+      </div>
+    </div>
+    <div class="field">
+      <div  class="ui radio checkbox">
+        <input id="checkbox2" type="radio" name="example2">
+        <label>Google Account</label>
+      </div>
+    </div>
+   
+  </div>
+</div>
+  
+  <div id="usernameb" class="content">
                <div style="width: 100%" class="ui input">
                   <input id="username" type="text" placeholder="Username">
                </div>
             </div>
-            <div class="content">
+            <div id="passwordb" class="content">
                <div style="width: 100%" class="ui input">
                   <input id="password" type="password" placeholder="Password">
                </div>
             </div>
+            
+            <div id="tokenb" class="content" style="display:none;">
+               <div style="width: 100%" class="ui input">
+                  <input id="token" type="text" placeholder="Google Token">
+               </div>
+            </div>
+            <div id="gettokenb" class="center aligned" style="display:none;">
+              <a href="https://accounts.google.com/o/oauth2/auth?client_id=848232511240-73ri3t7plvk96pj4f85uj8otdat2alem.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=openid%20email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email" target="_blank" style="width:200px;margin-bottom:15px"  class="ui green button" id="gtoken">Get Google Token</a>
+                </div>
+                <span style="display:none;" id="text-help">
+                Use the button above to get a Google Token, then paste it in the box to login! </span>
             <button class="ui button" id="submit">Get Profile</button>
          </div>
+           <script>
+  $('#checkbox1').change(function(){
+    if ($('#checkbox1').prop('checked')) {
+      $("#usernameb").show()
+      $("#passwordb").show()
+      $("#tokenb").hide()
+      $("#gettokenb").hide()
+      $("#text-help").hide()
+    }
+});
+
+    $('#checkbox2').change(function(){
+    // console.log()
+    // console.log($('#checkbox1').prop('checked'))
+    if ($('#checkbox2').prop('checked')) {
+      $("#usernameb").hide()
+      $("#passwordb").hide()
+      $("#tokenb").show()
+      $("#gettokenb").show()
+      $("#text-help").show()
+    }
+    
+});
+
+</script>
+
          <br/>
          <!-- <div > -->
                <div id= "errormsg"  style="display:none" class="ui negative message">
@@ -51,17 +127,14 @@
                </div>
          <!-- </div> -->
 
-                  <div class="ui card">
+                  <div class="ui card centered">
         <div class="content left aligned ">
-        <div class="header">Google 2-Factor Auth</div>
+        <div class="header">A Note About Security</div>
         <div class="meta">Today</div>
         <div class="description">
-                  <p>1. Go to <a href="https://security.google.com/settings/security/apppasswords" target="_blank">Google Security</a>
-             </p>
-            <p>2. Under 'Select app' select the 'other' option</p>
-            </p>3. Give it a name and click generate!</p>
-            <p>4. Use this password to login to this site.</p>
-            <p>5. Go back to google and revoke access if you wish.</p>
+        <p>We never save your password or token. Period. Niantic hasn't given us any tools to view other people's profiles, so getting your login is necessary. If a security breach ever happens, we don't want your information to be vulnerable, so we throw away your authentication details as soon as we retrieve the pokemon data. </p>
+        <p>Because of this, you'll need to login every time you want to update your profile. Hopefully in the future there will be some way to view other players' profiles, and when that happens we'll be the first to adjust.</p>
+        <p>If you're still hesitant, reach out to us! We'd love to give you a tour of the backend, where you can verify for yourself that we don't keep your passwords.</p>
         </div>
         </div>
       </div>
@@ -72,8 +145,8 @@
 
           </div>
           
-          <div class="five wide column">
-                  <div class="ui card">
+          <div id="mob_remove" class="five wide">
+                  <div style="margin-top: 10px;" class="ui centered card">
         <div class="content left aligned ">
         <div class="header">Welcome to PokeProfile</div>
         <div class="meta">Today</div>
@@ -83,7 +156,7 @@
         </div>
       </div>
       
-<div class="ui card">
+<div class="ui  centered card">
         <div class="content left aligned ">
         <div class="header">How does it work?</div>
         <div class="meta">Today</div>
@@ -123,7 +196,7 @@
 
    <!-- 
      <div class="pokeball">
-		<div id="ball" style="display: none" class="ball"></div>
+    <div id="ball" style="display: none" class="ball"></div>
    </div>
    
    
@@ -165,72 +238,88 @@
 
 
 
-		<div class="google_con">
-			<div style="width: 100%" class="ui card">
-			  <div class="content">
-				<div class="header">Google Two-Factor Auth Instructions</div>
-				<div class="description">
-					<p>1. Go to <a href="https://security.google.com/settings/security/apppasswords" target="_blank">Google Security</a>
-						 </p>
-						<p>2. Under 'Select app' select the 'other' option</p>
-						</p>3. Give it a name and click generate!</p>
-						<p>4. Use this password to login to this site.</p>
-						<p>5. Go back to google and revoke access if you wish.</p>
-				</div>
-			  </div>
-			</div>
-		</div>
+    <div class="google_con">
+      <div style="width: 100%" class="ui card">
+        <div class="content">
+        <div class="header">Google Two-Factor Auth Instructions</div>
+        <div class="description">
+          <p>1. Go to <a href="https://security.google.com/settings/security/apppasswords" target="_blank">Google Security</a>
+             </p>
+            <p>2. Under 'Select app' select the 'other' option</p>
+            </p>3. Give it a name and click generate!</p>
+            <p>4. Use this password to login to this site.</p>
+            <p>5. Go back to google and revoke access if you wish.</p>
+        </div>
+        </div>
       </div>
-	</div> 
-	
-	<div class="main_right">
-	
-		<div class="letter_con">
-			<div class="ui card">
-			  <div class="content">
-				<div class="header">Letter to the Devs</div>
-				<div class="meta">Today</div>
-				<div class="description">
-					<p>We love this game you have created. We love the culture it has caused in our world. We are not looking for a means to cheat! Instead, we want to have somewhere outside of the game where we can view our own pokemon, and brag about our collection. We hope that something like this will be official one day, but for now we hope this is okay.<p>
-				</div>
-			  </div>
-			</div>
-		</div>
-		<br>
-		<div class="letter_con">
-			<div class="ui card">
-			  <div class="content">
-				<div class="header">Welcome to PokeProfile!</div>
-				<div class="meta">2 days ago</div>
-				<div class="description">
-					<p>Welcome to PokeProfile! Here we extract the pokemon and user data from your account, with no risk of soft bans. We do NOT store your username or password, since we don't want to be responsible if someone hacks our database. Instead, it is thrown away after we've extracted the data. The connection is encrypted as well so your logins are safe.</p>
-				</div>
-			  </div>
-			</div>
-		</div>
-	</div> -->
-	  
+    </div>
+      </div>
+  </div> 
+  
+  <div class="main_right">
+  
+    <div class="letter_con">
+      <div class="ui card">
+        <div class="content">
+        <div class="header">Letter to the Devs</div>
+        <div class="meta">Today</div>
+        <div class="description">
+          <p>We love this game you have created. We love the culture it has caused in our world. We are not looking for a means to cheat! Instead, we want to have somewhere outside of the game where we can view our own pokemon, and brag about our collection. We hope that something like this will be official one day, but for now we hope this is okay.<p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="letter_con">
+      <div class="ui card">
+        <div class="content">
+        <div class="header">Welcome to PokeProfile!</div>
+        <div class="meta">2 days ago</div>
+        <div class="description">
+          <p>Welcome to PokeProfile! Here we extract the pokemon and user data from your account, with no risk of soft bans. We do NOT store your username or password, since we don't want to be responsible if someone hacks our database. Instead, it is thrown away after we've extracted the data. The connection is encrypted as well so your logins are safe.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+    
       <script type="text/javascript">
 
       function runLogin() {
-             var username = $("#username").val();
+
+
+           var username = $("#username").val();
              var password = $("#password").val();
+                var token = $("#token").val();
+
+        if ($('#checkbox1').prop('checked')) {
              if (username == "" || password == "")
                  return;
+        } else {
+             if (token == "")
+                 return;
+        }
 
+
+          
              if ($("#submit").hasClass("loading") || $("#submit").hasClass("disabled"))
                  return;
 
              $("#submit").addClass("loading");
 
-             var data = {
-                 username: username,
-                 password: password
-             }
 
              var data = {};
+
+        if ($('#checkbox1').prop('checked')) {
              data.username = username;
              data.password = password;
+        } else {
+            data.username = "a@a";
+             data.password = token; 
+        }
+
+
+        
 
              console.log(data)
 
@@ -238,7 +327,7 @@
                  type: 'POST',
                  data: JSON.stringify(data),
                  contentType: 'application/json',
-                 url: 'http://pokemon.rhocode.com:81/api/retrieve',
+                 url: 'https://pokemon.rhocode.com/api/retrieve',
                  success: function(data) {
 
                      var dat = JSON.parse(JSON.stringify(data));
@@ -287,7 +376,15 @@
                              }, 4000);
                          }  else if (dat.reason && dat.reason == "noavatar") {
                              
-                             $("#errordet").html("Please name your account and create a character first.");
+                             $("#errordet").html("Please name your account and create a character first. If you have already done so, your character may have been reset by the last dumb patch! Log in and check that you haven't been reset! Then contact Niantic Support!");
+                             $("#errormsg").fadeIn();
+                             $("#submit").removeClass("loading");
+                             setTimeout(function() {
+                                 $("#errormsg").fadeOut();
+                             }, 4000);
+                         } else if (dat.reason && dat.reason == "invalid_grant") {
+                             
+                             $("#errordet").html("Please regenerate your Google key.");
                              $("#errormsg").fadeIn();
                              $("#submit").removeClass("loading");
                              setTimeout(function() {
@@ -307,8 +404,13 @@
 
                  },
                  error: function(textStatus, errorThrown) {
-                     console.log("ERROR!")
-                     $("#submit").removeClass("loading");
+                        $("#errordet").html("Your request timed out. Niantic's server is probably down.");
+                             $("#errormsg").fadeIn();
+                             $("#submit").removeClass("loading");
+                             setTimeout(function() {
+                                 $("#errormsg").fadeOut();
+                             }, 4000);
+                     
                  }
 
              });
@@ -323,15 +425,20 @@
                 //  validate(); doesn't need to be called from here
               }
           });
+         window.location.href-"https://accounts.google.com/o/oauth2/auth?client_id=848232511240-73ri3t7plvk96pj4f85uj8otdat2alem.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=openid%20email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email"
       </script>
-	
-	<div style="position: absolute;bottom: 0; width: 100%; height: 67px">
-    <div id="pikachu"></div>
-	<div id="ash"></div>
-	</div>
-	
-	
-	  
+  
+  <script src="https://apis.google.com/js/api.js"></script>
+<script>
+</script>
+
+  <div class="mob_dis" style="position: absolute;bottom: 0; width: 100%; height: 67px">
+    <div  id="pikachu"></div>
+  <div  id="ash"></div>
+  </div>
+  
+  
+    
    </body>
    
 </html>
@@ -343,18 +450,22 @@ style="position: absolute;bottom: 0;"
    -->
    
    <script type="text/javascript">
-		// 	document.getElementById("ball").style.display = "block";
-		// 	toggleBall();
-		// 	window.setInterval(function(){
-		// 		document.getElementById("ball").style.display = "block";
-		// 		toggleBall();
-		// 	}, 14000);
+    //  document.getElementById("ball").style.display = "block";
+    //  toggleBall();
+    //  window.setInterval(function(){
+    //    document.getElementById("ball").style.display = "block";
+    //    toggleBall();
+    //  }, 14000);
 
-		// function toggleBall() {
-		// 	setTimeout(function() {
-		// 		document.getElementById("ball").style.display = "none";
-		// 	}, 4000);
-		// }
+    // function toggleBall() {
+    //  setTimeout(function() {
+    //    document.getElementById("ball").style.display = "none";
+    //  }, 4000);
+    // }
+
+
+
+
    </script>
    
    <!--
