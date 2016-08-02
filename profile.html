@@ -122,7 +122,8 @@
 			   
 			   -->
                <div class="cards_width">
-                  <div class="ui basic segment" >
+                  <div id="mob_mar" class="ui basic segment" >
+				  <div class="mobile_resize">
                      <!--       <h3 class="ui header">Application Content</h3>
                         <p></p>
                         <p></p>
@@ -139,7 +140,7 @@
 								
 								<div style="float: left; width: 70%;" >
 									<p style="margin-bottom: 10px;" >{{username}}</p>
-								   <span style="font-size:14px">Lv. </span><span style="font-size:14px">{{level}} </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup style="font-size:14px">{{caught}}</sup><span style="font-size:10px">/</span><sub style="font-size:16px">151</sub> &nbsp; <span style="font-size:14px">Caught</span>
+								   <span style="font-size:14px">Lv. </span><span style="font-size:14px">{{level}} </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup style="font-size:14px">{{caught}}</sup><span style="font-size:14px">/</span><sub style="font-size:14px">151</sub> &nbsp; <span style="font-size:14px">Caught</span>
 								</div>
 							</div>
 						</div>
@@ -203,6 +204,7 @@
 						  </div>
 						</div>
                   </div>
+				  </div>
                </div>
             </div>
             <!-- 
@@ -259,10 +261,14 @@ jQuery.fn.center = function () {
 
 <script type="text/javascript">
 
-//if (screen.width <= 699) {
-//var url = window.location.href;
-//var url = url.substring(url.indexOf("=") + 1);
-//document.location = "profile_responsive.html#/?id=" + url;
+if (screen.width <= 699) {
+document.getElementById("mob_mar").style.left = "-3%";
+}else{
+document.getElementById("mob_mar").style.left = "";
+}
+
+if (screen.width > 700) {
+document.getElementById("mob_mar").style.left = "";
 }
 
 </script>

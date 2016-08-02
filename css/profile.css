@@ -243,13 +243,16 @@ margin-left: 0px;
 font-size: 25px;
 text-align: center;
 margin-left: -3%;
+visibility: hidden;
+margin-bottom: 60px;
 }
 
 .profile_header{
-left: 11%;
+left: 7%;
 display: block;
 margin: auto;
 width: 80%;
+min-width: 80%;
 height: 80px;
 background-color: white;
 position: fixed;
@@ -265,6 +268,9 @@ height: 70%;
 
 }
 
+.mobile_resize{
+margin-left: -10px;
+}
 
 
 
